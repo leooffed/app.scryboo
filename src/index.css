@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Barre de défilement invisible (chips catégories mobile) */
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Safe area iOS (encoche / barre home) */
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Désactive le surlignage bleu au tap sur mobile pour un rendu natif */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (max-width: 1023px) {
+    button,
+    a,
+    select,
+    input[type="checkbox"] {
+      touch-action: manipulation;
+    }
+  }
+}
