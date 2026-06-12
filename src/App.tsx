@@ -6,12 +6,10 @@ import { Home } from "./pages/Home";
 import { CategoryPage } from "./pages/CategoryPage";
 import { ToolPage } from "./pages/ToolPage";
 import { AuthPage } from "./pages/AuthPage";
-import { Analytics } from "@vercel/analytics/next";
 
 export default function App() {
   return (
     <>
-      <Analytics />
       <HashRouter>
         <div className="min-h-screen bg-gray-50/50 flex flex-col font-sans text-gray-900">
           <Header />
